@@ -1,5 +1,71 @@
+body {
+    color: white;
+    font-family: Feather Bold;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background-color: #000614;
+}
+
+.container {
+    text-shadow: 0px 1px 10px black;
+    text-align: center;
+    padding: 65px;
+    border-radius: 10px;
+    background-color: #4B4B4B;
+    margin: 0 auto;
+}
+
 .game-board {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    box-shadow: black 0px 1px 9px;
+    font-size: 0px;
+    margin: 10px;
+    display: flex;
+    border: 1px solid;
+    border-radius: 11px;
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: center;
+}
+
+.card.flipped {
+    font-size: 29px;
+    display: flex;
+    border: 1px solid;
+    border-radius: 11px;
+    width: 100px;
+    height: 100px;
+    background-color: #FFE158;
+    align-items: center;
+    justify-content: center;
+}
+
+.card.flipped.matched {
+    font-size: 29px;
+    display: flex;
+    border: 1px solid;
+    border-radius: 11px;
+    width: 100px;
+    height: 100px;
+    background-color: #58CC02;
+    align-items: center;
+    justify-content: center;
+}
+
+button#resetButton {
+    font-family: Feather Bold;
+    box-shadow: black 0 0 8px;
+    border: white solid 1px;
+    border-radius: 10px;
+    width: 160px;
+    height: 50px;
+    margin: 32px 0 0 0;
 }

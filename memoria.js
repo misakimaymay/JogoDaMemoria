@@ -1,11 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     const gameBoard = document.getElementById('gameBoard');
     const messageDisplay = document.getElementById('message');
+    const resetButton = document.getElementById('resetButton');
     
     const cardsArray = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E']; 
     let flippedCards = [];
     let matchedCards = 0;
     let lockBoard = false;
+
+    resetButton.addEventListener('click', () => {
+        location.reload(); // Recarrega a página
+    });
 
     function shuffle(array) {
         
@@ -23,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.dataset.symbol = symbol;
             card.dataset.index = index;
             
-            // card.textContent = symbol; 
+            card.textContent = symbol; 
             card.addEventListener('click', flipCard);
             gameBoard.appendChild(card);
         });
@@ -41,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (flippedCards.length === 2) {
                 lockBoard = true;
                 
-                // setTimeout(checkForMatch, 1000);
+                setTimeout(checkForMatch, 1000);
             }
         }
     }
